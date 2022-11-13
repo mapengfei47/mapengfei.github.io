@@ -1,188 +1,618 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+<html lang="en">
 
-  
-  <title>马鹏飞个人博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端技术, 职场感悟, 生活分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马鹏飞个人博客">
-<meta property="og:url" content="https:&#x2F;&#x2F;mapengfei47.github.io&#x2F;mapengfei.github.io&#x2F;index.html">
-<meta property="og:site_name" content="马鹏飞个人博客">
-<meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="马鹏飞个人博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="icon" href="favicon.ico">
+    <title>出校申请</title>
+    <link href="/run/static/css/chunk-e5e09d44.d54f7dde.css" rel="prefetch">
+    <link rel="stylesheet" type="text/css" href="/run/static/css/chunk-e5e09d44.d54f7dde.css">
+
+    <link href="/run/static/css/app.8d890870.css" rel="preload" as="style">
+    <link href="/run/static/css/app.8d890870.css" rel="stylesheet">
+
+    <link href="/run/static/css/chunk-vendors.837470ce.css" rel="preload" as="style">
+    <link href="/run/static/css/chunk-vendors.837470ce.css" rel="stylesheet">
+
+    <link href="/run/static/js/app.f3cd1c57.js" rel="preload" as="script">
+
+    <link href="/run/static/js/chunk-e5e09d44.ac940c69.js" rel="prefetch">
+    <script charset="utf-8" src="/run/static/js/chunk-e5e09d44.ac940c69.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vant@3/lib/index.css" />
+    <style>
+        html {
+            font-size: 14px;
+        }
+
+        #app {
+            box-sizing: border-box;
+        }
+
+        .bg-theme {
+            background-color: #2bb7b3;
+        }
+
+        .wp100 {
+            width: 100%;
+        }
+
+        .navbar[data-v-0421930a] {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .van-nav-bar {
+            position: relative;
+            z-index: 1;
+            line-height: 22px;
+            text-align: center;
+            background-color: #fff;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .van-hairline,
+        .van-hairline--bottom,
+        .van-hairline--left,
+        .van-hairline--right,
+        .van-hairline--surround,
+        .van-hairline--top,
+        .van-hairline--top-bottom {
+            position: relative;
+        }
+
+        .van-nav-bar__content {
+            position: relative;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            height: 46px;
+        }
+
+        .van-nav-bar__content {
+            background-color: #2bb7b3;
+        }
+
+        .van-hairline--bottom:after {
+            border-bottom-width: 1px;
+        }
+
+        [class*=van-hairline]:after {
+            position: absolute;
+            box-sizing: border-box;
+            content: " ";
+            pointer-events: none;
+            top: -50%;
+            right: -50%;
+            bottom: -50%;
+            left: -50%;
+            border: 0 solid #ebedf0;
+            -webkit-transform: scale(.5);
+            transform: scale(.5);
+        }
+
+        .van-nav-bar__left {
+            left: 0;
+        }
+
+        .van-nav-bar__left,
+        .van-nav-bar__right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            padding: 0 16px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .van-nav-bar__title {
+            max-width: 60%;
+            margin: 0 auto;
+            color: #323233;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .van-ellipsis {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .van-nav-bar .van-icon,
+        .van-nav-bar__title {
+            color: #fff !important;
+        }
+
+        .van-nav-bar .van-icon {
+            color: #1989fa;
+        }
+
+        .van-nav-bar .van-icon,
+        .van-nav-bar__title {
+            color: #fff !important;
+        }
+
+        .van-nav-bar__arrow {
+            margin-right: 4px;
+            font-size: 16px;
+        }
+
+        .van-icon,
+        .van-icon:before {
+            display: inline-block;
+        }
+
+        .van-icon {
+            position: relative;
+            font: normal normal normal 14px/1 vant-icon;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .van-icon-arrow-left:before {
+            content: "\E668";
+        }
+
+        .van-icon,
+        .van-icon:before {
+            display: inline-block;
+        }
+
+        .pt44 {
+            padding-top: 44px;
+        }
+
+        .box-siz {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .pd20 {
+            padding: 20px;
+        }
+
+        .wp100 {
+            width: 100%;
+        }
+
+        ol,
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body,
+        dd,
+        dl,
+        dt,
+        fieldset,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        html,
+        img,
+        legend,
+        li,
+        ol,
+        p,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .pos-rel {
+            position: relative;
+        }
+
+        .bdr-p5 {
+            border-radius: 5px;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
+        }
+
+        .bg-white {
+            background-color: #fff;
+        }
+
+        .h120 {
+            height: 120px;
+        }
+
+        body,
+        dd,
+        dl,
+        dt,
+        fieldset,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        html,
+        img,
+        legend,
+        li,
+        ol,
+        p,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        .radio1[data-v-69238719],
+        .radio2[data-v-69238719] {
+            position: absolute;
+            top: 45px;
+            background-color: #2bb7b3;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        .radio1[data-v-69238719] {
+            left: -15px;
+        }
+
+        .radio2[data-v-69238719] {
+            right: -15px;
+        }
+
+        .radio1[data-v-69238719],
+        .radio2[data-v-69238719] {
+            position: absolute;
+            top: 45px;
+            background-color: #2bb7b3;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        .green[data-v-69238719] {
+            color: #01bb2c;
+            font-weight: 600;
+        }
+
+        .align-center {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .justify-center {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .fz23 {
+            font-size: 23px;
+        }
+
+        .h60 {
+            height: 60px;
+        }
+
+        .br[data-v-69238719] {
+            border-top: 1px dashed #999;
+        }
+
+        .h60 {
+            height: 60px;
+        }
+
+        .align-center {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .justify-center {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .mt5 {
+            margin-top: 5px;
+        }
+
+        .red[data-v-69238719] {
+            color: #f5382a;
+            font-weight: 600;
+        }
+
+        [class*=van-hairline]:after {
+            position: absolute;
+            box-sizing: border-box;
+            content: " ";
+            pointer-events: none;
+            top: -50%;
+            right: -50%;
+            bottom: -50%;
+            left: -50%;
+            border: 0 solid #ebedf0;
+            -webkit-transform: scale(.5);
+            transform: scale(.5);
+        }
+
+        .van-hairline--bottom:after {
+            border-bottom-width: 1px;
+        }
+
+        .van-nav-bar__arrow {
+            margin-right: 4px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">马鹏飞个人博客</a>
-      </h1>
-      
+    <noscript><strong>We're sorry but vue-admin doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong></noscript>
+    <div id="app">
+        <div data-v-69238719="" id="lineCodeHeight" class="bg-theme wp100" style="min-height: 1000px">
+            <div data-v-0421930a="" data-v-69238719="">
+                <div data-v-0421930a="" class="navbar" style="z-index: 100;">
+                    <div data-v-0421930a="" class="van-nav-bar van-hairline--bottom">
+                        <div class="van-nav-bar__content">
+                            <div class="van-nav-bar__left"><i class="van-icon van-icon-arrow-left van-nav-bar__arrow">
+                                    <!---->
+                                </i></div>
+                            <div class="van-nav-bar__title van-ellipsis">通行条码</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-v-69238719="" class="pt44">
+                <ul data-v-69238719="" class="pd20 box-siz wp100">
+                    <li data-v-69238719=""
+                        class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
+                        <div data-v-69238719="" class="radio1"></div>
+                        <div data-v-69238719="" class="radio2"></div>
+                        <div data-v-69238719="" class="title h60 flex justify-center align-center fz23 red"><span
+                                data-v-69238719="">已过期</span></div>
+                        <div data-v-69238719="" class="h60 br">
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">有效期</div>
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">
+                                2022-08-04 16:30 至 2022-08-04 19:30
+                            </div>
+                        </div>
+                        <div id="0"
+                            style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;">
+                        </div>
+                    </li>
+                    <li data-v-69238719=""
+                        class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
+                        <div data-v-69238719="" class="radio1"></div>
+                        <div data-v-69238719="" class="radio2"></div>
+                        <div data-v-69238719="" class="title h60 flex justify-center align-center fz23 red"><span
+                                data-v-69238719="">已过期</span></div>
+                        <div data-v-69238719="" class="h60 br">
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">有效期</div>
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">
+                                2022-11-01 17:30 至 2022-11-05 18:15
+                            </div>
+                        </div>
+                        <div id="1"
+                            style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;">
+                        </div>
+                    </li>
+                    <li data-v-69238719=""
+                        class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
+                        <div data-v-69238719="" class="radio1"></div>
+                        <div data-v-69238719="" class="radio2"></div>
+                        <div data-v-69238719="" class="title h60 flex justify-center align-center fz23 red"><span
+                                data-v-69238719="">已过期</span></div>
+                        <div data-v-69238719="" class="h60 br">
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">有效期</div>
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">
+                                2022-10-20 15:00 至 2022-10-26 22:30
+                            </div>
+                        </div>
+                        <div id="2"
+                            style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;">
+                        </div>
+                    </li>
+                    <li data-v-69238719=""
+                        class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
+                        <div data-v-69238719="" class="radio1"></div>
+                        <div data-v-69238719="" class="radio2"></div>
+                        <div data-v-69238719="" class="title h60 flex justify-center align-center fz23 red"><span
+                                data-v-69238719="">已过期</span></div>
+                        <div data-v-69238719="" class="h60 br">
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">有效期</div>
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">
+                                2022-10-10 09:30 至 2022-10-12 19:30
+                            </div>
+                        </div>
+                        <div id="3"
+                            style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;">
+                        </div>
+                    </li>
+                    <li data-v-69238719=""
+                        class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
+                        <div data-v-69238719="" class="radio1"></div>
+                        <div data-v-69238719="" class="radio2"></div>
+                        <div data-v-69238719="" class="title h60 flex justify-center align-center fz23 red"><span
+                                data-v-69238719="">已过期</span></div>
+                        <div data-v-69238719="" class="h60 br">
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">有效期</div>
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">
+                                2022-10-01 16:30 至 2022-10-03 18:15
+                            </div>
+                        </div>
+                        <div id="4"
+                            style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;">
+                        </div>
+                    </li>
+                    <li data-v-69238719=""
+                        class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
+                        <div data-v-69238719="" class="radio1"></div>
+                        <div data-v-69238719="" class="radio2"></div>
+                        <div data-v-69238719="" class="title h60 flex justify-center align-center fz23 red"><span
+                                data-v-69238719="">已过期</span></div>
+                        <div data-v-69238719="" class="h60 br">
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">有效期</div>
+                            <div data-v-69238719="" class="flex justify-center align-center mt5">
+                                2022-09-20 12:30 至 2022-09-25 18:15
+                            </div>
+                        </div>
+                        <div id="5"
+                            style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://mapengfei47.github.io/mapengfei.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/23/hello-world/" class="article-date">
-  <time datetime="2019-10-23T02:31:07.893Z" itemprop="datePublished">2019-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/23/hello-world/">Hello World</a>
-    </h1>
-  
+    <script>
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+        var day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+        var hh = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+        var mm = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        var ss = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        var time = function () {
+            return year + "-" + month + "-" + day + " " + hh + ":" + mm + ":" + ss;
+        }
+        var tomorrow = function () {
+            return year + "-" + month + "-" + (day + 1) + " " + hh + ":" + mm + ":" + ss;
+        }
+        var yesterday = function () {
+            return year + "-" + month + "-" + (day - 1) + " " + hh + ":" + mm + ":" + ss;
+        }
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+        let dateLine = document.querySelector("#lineCodeHeight > div.pt44 > ul > li > div.h60.br > div:nth-child(2)")
+        let today = time().split(' ')[0]
+        let tomorroww = tomorrow().split(' ')[0]
+        let yesterdayy = yesterday().split(' ')[0]
+        if (date.getHours() > 4) {
+            dateLine.innerHTML = today + " 08:30 至 " + tomorroww + " 23:30"
+        } else { dateLine.innerHTML = yesterdayy + " 08:30 至 " + today + " 23:30" }
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+        //生成背景
+        let a = today
+        let b = document.createElement("canvas");
+        b.width = 120;
+        b.height = 55;
+        let c = b.getContext("2d");
+        c.rotate(-15 * Math.PI / -180);
+        c.font = "18px Vedana";
+        // c.fillStyle = "rgba(1, 187, 44, 0.40)";
+        c.fillStyle = "rgba(245, 56, 42, 0.40)";
+        c.textAlign = "left";
+        c.textBaseline = "Middle";
+        c.fillText(a, 15, 27.5);
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+        // 单独给第一挂载绿色
+        let a1 = today
+        let b1 = document.createElement("canvas");
+        b1.width = 120;
+        b1.height = 55;
+        let c1 = b1.getContext("2d");
+        c1.rotate(-15 * Math.PI / -180);
+        c1.font = "18px Vedana";
+        c1.fillStyle = "rgba(1, 187, 44, 0.40)";
+        // c1.fillStyle = "rgba(245, 56, 42, 0.40)";
+        c1.textAlign = "left";
+        c1.textBaseline = "Middle";
+        c1.fillText(a, 15, 27.5);
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        document.getElementById('0').style.background = "url(" + b1.toDataURL("image/png") + ") left top repeat";
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://mapengfei47.github.io/mapengfei.github.io/2019/10/23/hello-world/" data-id="ck22opsv60000z8rdgc21doii" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+        document.getElementById('1').style.background = "url(" + b.toDataURL("image/png") + ") left top repeat";
 
+        document.getElementById('2').style.background = "url(" + b.toDataURL("image/png") + ") left top repeat";
 
-  
+        document.getElementById('3').style.background = "url(" + b.toDataURL("image/png") + ") left top repeat";
 
+        document.getElementById('4').style.background = "url(" + b.toDataURL("image/png") + ") left top repeat";
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+        document.getElementById('5').style.background = "url(" + b.toDataURL("image/png") + ") left top repeat";
 
-  
-    
+        let t = document.getElementsByClassName('title h60')[0];
+        t.classList.replace('red', 'green');
+        t.getElementsByTagName('span')[0].innerText = '可通行';
+        t.nextSibling.lastChild.innerText = a + " 09:00 至 " + a + " 23:59";
+        let tt = document.getElementsByClassName('wp100')[1].getElementsByTagName('li');
+        console.log(tt);
+        tt[tt.length - 1].style.display = 'none'
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/10/23/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 马鹏飞<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
+    </script>
+    <script>
+        var i = 0;
+        setInterval(() => {
+            i--;
+            document.getElementById('0').style.left = i + 'px';
+            document.getElementById('1').style.left = i + 'px';
+            document.getElementById('2').style.left = i + 'px';
+            document.getElementById('3').style.left = i + 'px';
+            document.getElementById('4').style.left = i + 'px';
+            document.getElementById('5').style.left = i + 'px';
+        }, 50)
+    </script>
 </body>
+
 </html>
